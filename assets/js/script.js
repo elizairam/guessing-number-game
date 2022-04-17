@@ -9,8 +9,8 @@ const subtitle = document.getElementsByClassName("subtitle")[0];
 const button = document.getElementById("guess-enter");
       button.addEventListener("click", CheckGuess);
 const h2_result = document.getElementById("result");
-const h2_Remaining = document.getElementById("remaining");
-const h2_Result = document.getElementById("result-max");
+const h2_remaining = document.getElementById("remaining");
+const h2_result_max = document.getElementById("result-max");
 const progress_bar = document.getElementById("progress-bar");
 
 const guess = {
@@ -47,13 +47,13 @@ function CheckGuess() {
 function CounterGuess() {
   guess.total >= 10
     ? Reset()
-    : (guess.total += 1) && (h2_Result.innerHTML = "Guess: " + guess.total);
+    : (guess.total += 1) && (h2_result_max.innerHTML = "Guess: " + guess.total);
 }
 
 function CounterMaxGuess() {
   guess.max >= 0
     ? (guess.max -= 1) &&
-      (h2_Remaining.innerHTML = "Remaining: " + guess.max) &&
+      (h2_remaining.innerHTML = "Remaining: " + guess.max) &&
       (progress_bar.value = guess.max)
     : GameOver();
 }
@@ -65,7 +65,7 @@ function GameOver() {
 
 function ShowMessage() {
   game.message = "Better luck next time 🍀";
-  h2_Remaining.innerHTML = game.message;
+  h2_remaining.innerHTML = game.message;
 }
 
 function Reset() {
@@ -75,9 +75,9 @@ function Reset() {
     game.message = "";
     game.chosed_number_random = Math.floor(Math.random() * 101);
     guess.total = 1;
-    h2_Result.innerHTML = "enter your guess and press enter to start again";
+    h2_result_max.innerHTML = "enter your guess and press enter to start again";
     guess.max = 10;
-    h2_Remaining.innerHTML = null;
+    h2_remaining.innerHTML = null;
     progress_bar.value = 10;
   }
 }
