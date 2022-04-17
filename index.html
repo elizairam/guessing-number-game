@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>number-guessing game</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body>
+  <section class="section">
+    <div class="container">
+
+      <div class="control">
+        <span id="theme-selector">🌜</span>
+      </div>
+      <h1 class="title">
+        number guessing game 🔮
+      </h1>
+      <p class="subtitle">
+        I am thinking of number between <strong id="range">0</strong> and <strong>100</strong>!
+      </p>
+      <div class="columns is-mobile">
+        <div class="column">
+          <input id="guess-number" class="input is-primary is-medium is-rounded" type="number"
+            placeholder="enter your guess">
+        </div>
+        <div class="column"><button id="guess-enter" class="button is-primary is-medium is-rounded">Enter</button></div>
+
+      </div>
+
+      <div>
+        <h2 class="subtitle is-4" id="result"></h2>
+        <h2 class="subtitle is-4" id="result-max"></h2>
+        <h2 class="subtitle is-4" id="remaining"></h2>
+        <div>
+          <progress id="progress-bar" class="progress is-primary" value="0" min="0" max="10">0%</progress>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <footer>number guessing game | made with 🍀 by elizabet_ | 2022</footer>
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>

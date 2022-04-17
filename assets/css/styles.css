@@ -1,0 +1,47 @@
+body {
+  background-color: #d2d7df;
+  margin: 0;
+  height: 100vh;
+	width: 100%;
+}
+
+body.dark-theme {
+  background-color: #2e2d4d;
+}
+
+h2.dark-theme {
+  color: #e5e8e8;
+}
+
+h1.dark-theme {
+  color: #e5e8e8;
+}
+
+footer {
+	width: 100%;
+	background-color: #b58ce4;
+	padding: 30px;
+	color: #e5e8e8;
+	position: fixed;
+	bottom: 0;
+	text-align: center;
+	font-weight: 400;
+}
+
+footer.dark-theme {
+  background-color: #aaabbc;
+  color: #000000;
+}
+
+.control {
+  text-align: end;
+}
+
+.subtitle.dark-theme {
+  color: #e5e8e8;
+}
+
+.subtitle strong  {
+  color:#b58ce4;
+}
+
