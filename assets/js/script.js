@@ -68,7 +68,7 @@ function Reset() {
     document.getElementById("guess-number").value = null;
     game.status = "started";
     game.chosed_number_random = Math.floor(Math.random() * 101);
-    guess.total = 1;
+    guess.total = 0;
     h2_result_max.innerHTML = "enter your guess and press enter to start again";
     guess.max = 10;
     h2_remaining.innerHTML = null;
