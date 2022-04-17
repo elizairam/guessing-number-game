@@ -66,6 +66,7 @@ function GameOver() {
 function ShowMessage() {
   game.message = "Better luck next time 🍀";
   h2_remaining.innerHTML = game.message;
+  Reset();
 }
 
 function Reset() {
