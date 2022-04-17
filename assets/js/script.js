@@ -1,13 +1,13 @@
 const body = document.getElementsByTagName("body")[0];
 const footer = document.getElementsByTagName("footer")[0];
 const theme_selector = document.getElementById("theme-selector");
-      theme_selector.addEventListener("click", ChangeTheme);
+theme_selector.addEventListener("click", ChangeTheme);
 const h2 = document.getElementsByTagName("h2");
 const h1 = document.getElementsByTagName("h1")[0];
 const subtitle = document.getElementsByClassName("subtitle")[0];
 
 const button = document.getElementById("guess-enter");
-      button.addEventListener("click", CheckGuess);
+button.addEventListener("click", CheckGuess);
 const h2_result = document.getElementById("result");
 const h2_remaining = document.getElementById("remaining");
 const h2_result_max = document.getElementById("result-max");
@@ -22,11 +22,11 @@ const guess = {
 const game = {
   chosed_number_random: Math.floor(Math.random() * 101),
   status: "started",
-  message: "",
 };
 
 function CheckGuess() {
   guess.number = document.getElementById("guess-number").value;
+
   if (game.chosed_number_random == guess.number) {
     h2_result.innerHTML = "You got it✨";
     game.status = "finished";
@@ -60,12 +60,6 @@ function CounterMaxGuess() {
 
 function GameOver() {
   game.status = "finished";
-  ShowMessage();
-}
-
-function ShowMessage() {
-  game.message = "Better luck next time 🍀";
-  h2_remaining.innerHTML = game.message;
   Reset();
 }
 
@@ -73,7 +67,6 @@ function Reset() {
   if (game.status === "finished") {
     document.getElementById("guess-number").value = null;
     game.status = "started";
-    game.message = "";
     game.chosed_number_random = Math.floor(Math.random() * 101);
     guess.total = 1;
     h2_result_max.innerHTML = "enter your guess and press enter to start again";
